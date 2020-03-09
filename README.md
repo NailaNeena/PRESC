@@ -57,7 +57,7 @@ datasets.
   Please do not include external datasets in your contributions at this point.
 - We are working in Python using the standard data science stack
   (Numpy/Pandas/Scikit-learn/Jupyter).
-- Your code should run in the provided [Conda environment](TODO). If you feel
+- Your code should run in the provided [Conda environment](environment.yml). If you feel
   you need an external dependency, you may include an update to the environment
   file in your PR.
 
@@ -67,7 +67,7 @@ datasets.
 To keep the project structure and review process manageable at this initial
 stage, please structure your contributions using the following steps:
 
-- Create a directory with your username in the `dev` dir
+- Create a directory with your username in the [`dev`](./dev) dir
 - Structure your code into one or more Python modules in that directory
     * Code should be well-documented. Each function should include a docstring.
 - Include a [Jupyter
@@ -96,25 +96,43 @@ other contributions at this point, unless to resolve errors or typos.
 
 ## Information for Outreachy participants
 
-- This project is intentionally broadly scoped, and the initial phase will be
+This project is intentionally broadly scoped, and the initial phase will be
   exploratory.
-    * The goal is to propose and test out ideas related to the evaluation of
-      classifiers, rather than jumping straight into building features.
-    * Many of the tasks are open-ended and can be worked on by multiple
-      contributors at the same time. This will be made clear in the issue
-      description.
-- Tasks are managed using the [GitHub issue tracker](https://github.com/mozilla/PRESC/issues).
-- Contributions can be made by submitting a [pull
-  request](https://help.github.com/articles/using-pull-requests) against this
-  repository.
+
+- The goal is to propose and test out ideas related to the evaluation of
+  classifiers, rather than jumping straight into building features.
+- Tasks are open-ended and can be worked on by multiple
+  contributors at the same time, as different people may propose
+  complimentary ideas or approaches.
+
+You can ask for help and discuss your ideas on [gitter](https://gitter.im/PRESC-outreachy/community).
+
+### Issues
+
+Tasks are managed using the [GitHub issue tracker](https://github.com/mozilla/PRESC/issues).
+
+- As issues represent general exploratory tasks at this point, they will
+  generally not be assigned to a single person.
+- If you want to work on a task, drop a comment in the issue.
+- You are welcome to make a contribution to an issue even if others are
+  already working on it. You may also expand on someone else's work, eg.
+  testing out the methodology with different datasets or models.
+- As the project matures, we may start filing targeted issues, eg. to fix
+  specific bugs, which will get assigned to specific person
+- You are also welcome to contribute your own issues if there is a direction you
+  would like to explore relating to the project focus.
+
+### Contributions
+
+Contributions can be made by submitting a [pull request](https://help.github.com/articles/using-pull-requests) against this repository.
+
 - We ask each Outreachy participant to make a contribution completing
-  (TODO: issue number) (train and test a classification model). This will help
-  you to become familiar with machine learning and the tools if you are not
-  already. Please submit as a PR following the [guidelines](#contribution-guidelines) above.
+  [#2](https://github.com/mozilla/PRESC/issues/2) (train and test a
+  classification model). This will help you to become familiar with machine
+  learning and the tools if you are not already. Please submit as a PR following
+  the [guidelines](#contribution-guidelines) above.
     * This task __must__ be completed in order to be considered as an intern on
       this project
-- You can ask for help and discuss your ideas on
-  [gitter](https://gitter.im/PRESC-outreachy/community).
 - If you would like initial feedback on your contribution before it is ready for
   submission, you may open a PR with "WIP:" at the start of the title and
   request review. This tag ('work in progress') indicates that the PR is not
@@ -124,10 +142,63 @@ other contributions at this point, unless to resolve errors or typos.
 
 ## Getting started
 
-__TODO__
+1. Install [Anaconda](https://www.anaconda.com/download) or [Miniconda](https://conda.io/miniconda.html).
+
+2. Setup and activate environment:
+
+```
+ $ conda env create -f environment.yml
+ $ conda activate presc
+```
+
+3. Run Jupyter. The notebook will open in your browser at `localhost:8888` by default.
+
+```
+ $ jupyter notebook
+```
+
+We recommend everyone start by working on
+[#2](https://github.com/mozilla/PRESC/issues/2).
+
+
+### Getting started with GitHub
+
+The git/GitHub open-source workflow can be rather confusing if you haven't used
+it before. To make a contribution to the project, the general steps you need to
+take are:
+
+- Install [git](https://git-scm.com/downloads) on your computer
+- Fork the repo on Github (ie. make your own personal copy)
+- Clone your fork to your local computer
+- Commit changes locally on your computer
+- Push your changes to your fork on Github
+- Submit a pull request (PR) against the main repo from your fork.
+
+Here are some resources to learn more about parts of this workflow you are
+unfamiliar with:
+
+- [GitHub Guides](https://guides.github.com/)
+    * In particular, the [git handbook](https://guides.github.com/introduction/git-handbook/) explains some of the basics of the version control system
+    * There is a [page](https://guides.github.com/activities/forking/)
+      explaining the forking/pull request workflow you will be using to
+      contribute.
+- The [Git Book](https://git-scm.com/book/en/v2) is much more detailed but a good reference
+    * The [Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) section is worth reading
+    * There are also some [videos](https://git-scm.com/videos) on getting set up
+- This [repo](https://github.com/aSquare14/Git-Cheat-Sheet) by a previous
+  Outreachy contributor lists many other resources and tutorials.
+- This [video tutorial series](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAKWClAD_iKpNC0bGHxGhcx) on Youtube may also be helpful
+
+Feel free to reach out to the mentors by email or on Gitter if you have further
+questions or are having trouble getting set up!
 
 
 ## Resources
 
 
-__TODO__
+- [This](https://github.com/brandon-rhodes/pycon-pandas-tutorial) is a great tutorial to learn Pandas.
+- [Tutorial](https://www.youtube.com/watch?v=HW29067qVWk) on Jupyter Notebook.
+- The [scikit-learn user guide](https://scikit-learn.org/stable/user_guide.html)
+  is a good place to start learning the scikit-learn library as well as machine
+  learning methodology and comes with lots of examples.
+- [This](https://builtin.com/data-science/supervised-machine-learning-classification) page has a nice overview of classification models.
